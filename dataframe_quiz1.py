@@ -1,22 +1,22 @@
 import pandas as pd
 
 def get_department(df):
-    pass
-    
+    return df["Department"]
+       
 def get_second_record(df):
-    pass
+    return df.iloc[1]
     
 def get_info_grace(df):
-    pass
+    return df.loc["Grace"]
 
 def get_experience_location(df):
-    pass
+    return df[["Experience", "Location"]]
     
 def get_department_elena_aiden(df):   
-    pass
+    return df.loc[["Elena", "Aiden"]]["Department"]
 
 def get_experience_salary_third_to_end(df):
-    pass
+    return df[["Experience", "Monthly Salary"]].iloc[2:len(df)]
 
 def main():
     df = pd.read_csv("data.csv", index_col= 0)
